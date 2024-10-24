@@ -1,0 +1,46 @@
+.form-container {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-form-field {
+    margin-bottom: 15px;
+  }
+  
+  .mat-raised-button {
+    border-radius: 20px;
+    padding: 8px 24px;
+  }
+  
+  mat-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-icon {
+    margin-right: 8px;
+  }
+  
+  //----------------
+
+  .inset-border {
+  background-color: #f5f5f5; /* Light background for contrast */
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #ddd; /* Subtle outer border */
+  
+  /* Inset effect using box-shadow */
+  box-shadow: 
+    inset 4px 4px 10px rgba(0, 0, 0, 0.1),  /* Dark inner shadow for depth */
+    inset -4px -4px 10px rgba(255, 255, 255, 0.7); /* Light inner shadow for highlight */
+  
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.inset-border:hover {
+  box-shadow: 
+    inset 6px 6px 12px rgba(0, 0, 0, 0.15),  /* Darker inner shadow on hover */
+    inset -6px -6px 12px rgba(255, 255, 255, 0.8); /* Lighter inner shadow on hover */
+}

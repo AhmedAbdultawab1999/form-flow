@@ -1,0 +1,35 @@
+/* Navbar Styling */
+mat-toolbar {
+    border-bottom: 2px solid #DAE5E4;
+  }
+  
+  .navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #DAE5E4;
+  }
+  
+  button.mat-icon-button {
+    background-color: #00dddd;
+    border-radius: 50%;
+  }
+  
+  button.mat-icon-button:hover {
+    background-color: #DAE5E4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      display: none;
+    }
+  }
+  

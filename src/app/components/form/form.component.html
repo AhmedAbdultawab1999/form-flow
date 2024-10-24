@@ -1,0 +1,52 @@
+<form [formGroup]="myForm" class="container p-4 shadow rounded bg-light">
+  <!-- First Row -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Name</mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        <input matInput id="name" formControlName="name" placeholder="Enter your name" />
+        <mat-hint align="end">e.g. John Doe</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Age</mat-label>
+        <mat-icon matPrefix>calendar_today</mat-icon>
+        <input matInput id="age" formControlName="age" type="number" placeholder="Enter your age" />
+        <mat-hint align="end">e.g. 25</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="row mb-4">
+    <div class="col-md-6 d-flex align-items-center">
+      <mat-checkbox formControlName="terms" color="primary" class="me-2"> 
+        Accept Terms
+      </mat-checkbox>
+      <mat-icon matTooltip="Please read terms and conditions">info</mat-icon>
+    </div>
+    <div class="col-md-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Gender</mat-label>
+        <mat-select id="gender" formControlName="gender">
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Buttons Row -->
+  <div class="row mt-4">
+    <div class="col-md-12 d-flex justify-content-end">
+      <button mat-raised-button color="primary" class="me-3" (click)="undo()" [disabled]="!canUndo">
+        <mat-icon>undo</mat-icon> Undo
+      </button>
+      <button mat-raised-button color="accent" (click)="redo()" [disabled]="!canRedo">
+        <mat-icon>redo</mat-icon> Redo
+      </button>
+    </div>
+  </div>
+</form>
