@@ -22,7 +22,7 @@
   <!-- Second Row -->
   <div class="row mb-4">
     <div class="col-md-6 d-flex align-items-center">
-      <mat-checkbox formControlName="terms" color="primary" class="me-2"> 
+      <mat-checkbox formControlName="terms" color="primary" class="me-2">
         Accept Terms
       </mat-checkbox>
       <mat-icon matTooltip="Please read terms and conditions">info</mat-icon>
@@ -41,10 +41,10 @@
   <!-- Buttons Row -->
   <div class="row mt-4">
     <div class="col-md-12 d-flex justify-content-end">
-      <button mat-raised-button color="primary" class="me-3" (click)="undo()" [disabled]="!canUndo">
+      <button mat-raised-button color="primary" class="me-3" (click)="undo()" [disabled]="!(canUndo$ | async)">
         <mat-icon>undo</mat-icon> Undo
       </button>
-      <button mat-raised-button color="accent" (click)="redo()" [disabled]="!canRedo">
+      <button mat-raised-button color="accent" (click)="redo()" [disabled]="!(canRedo$ | async)">
         <mat-icon>redo</mat-icon> Redo
       </button>
     </div>
